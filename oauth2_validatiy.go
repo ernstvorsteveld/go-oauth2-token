@@ -6,8 +6,6 @@ import (
 	"time"
 )
 
-var defaultDuration, _ = time.ParseDuration("10s")
-
 type ValiditySpecificationType struct {
 	issued_at      time.Time
 	valid_until    time.Time
