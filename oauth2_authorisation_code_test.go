@@ -2,7 +2,6 @@ package oauth2
 
 import (
 	"fmt"
-	// 	"github.com/ernstvorsteveld/go-random"
 	"testing"
 )
 

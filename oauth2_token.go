@@ -1,7 +1,6 @@
 package oauth2
 
 import (
-	oauthmodel "github.com/ernstvorsteveld/go-oauth2"
 	"github.com/google/uuid"
 )
 
@@ -45,7 +44,7 @@ func TokenTypeValueOf(val string) TokenTypeType {
 type Oauth2TokenType struct {
 	token_type TokenTypeType
 	token      TokenType
-	client_id  oauthmodel.ClientIdType
+	client_id  uuid.UUID
 	user_id    UserIdType
 }
 
@@ -69,7 +68,7 @@ func NewOauth2Token(tokenTypeValue string) Oauth2TokenType {
 
 type Oauth2Token interface {
 	IsValid() bool
-	GetClientId() oauthmodel.ClientIdType
+	GetClientId() uuid.UUID
 	GetUserId() UserIdType
 	String() string
 }
